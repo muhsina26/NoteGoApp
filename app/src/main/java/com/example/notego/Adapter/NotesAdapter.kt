@@ -25,7 +25,7 @@ class NotesAdapter(private  val context: Context,val listener:NotesClickListener
     }
 
     override fun getItemCount(): Int {
-       return NotesList.size
+        return NotesList.size
     }
     fun updateList(newList: List<Note>){
         fullList.clear()
@@ -84,7 +84,7 @@ class NotesAdapter(private  val context: Context,val listener:NotesClickListener
 
     }
     inner class  NoteViewHolder(itemView:View) :RecyclerView.ViewHolder(itemView){
-val notes_layout=itemView.findViewById<CardView>(R.id.card_layout)
+        val notes_layout=itemView.findViewById<CardView>(R.id.card_layout)
         val title=itemView.findViewById<TextView>(R.id.tv_title)
         val Note_tv=itemView.findViewById<TextView>(R.id.tv_note)
         val date= itemView.findViewById<TextView>(R.id.tv_date)

@@ -32,5 +32,27 @@ class NoteViewModel(application: Application) : AndroidViewModel(application) {
         repository.update(note)
 
     }
+    //sorting Methods
+
+    //get sorted notes by title
+    fun getSortedNotesByTitleAsc():LiveData<List<Note>>{
+        return  repository.getNotesSortedByTitleAsc()
+    }
+    //Get sorted notes by title DESC
+
+    fun getSortedNotesByTitleDesc():LiveData<List<Note>>{
+        return  repository.getNotesSortedByTitleDesc()
+    }
+
+    //Get sorted notes by Date(ASC)
+
+    fun  getSortedNotesByDateAsc():LiveData<List<Note>>{
+        return repository.getNotesSortedByDateAsc()
+    }
+
+    fun getSortedNotesByDateDesc():LiveData<List<Note>>{
+        return  repository.getNotesSortedByDateDesc()
+    }
+
 
 }

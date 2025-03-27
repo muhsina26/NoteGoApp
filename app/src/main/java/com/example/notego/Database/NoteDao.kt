@@ -24,5 +24,22 @@ interface NoteDao {
     @Query("UPDATE notes_table Set title= :title,note=:note WHERE id=:id")
     suspend fun update(id : Int? ,title: String?,note:String?)
 
+    //sorting by Title
+    @Query("SELECT * FROM notes_table ORDER BY title ASC")
+    fun getNotesSortedByTitleAsc(): LiveData<List<Note>>
+
+    @Query("SELECT * FROM notes_table ORDER BY title DESC")
+    fun getNotesSortedByTitleDesc():LiveData<List<Note>>
+
+    //sorting by date
+
+    @Query("SELECT *FROM notes_table ORDER BY id ASC")
+    fun getNotesSortedByDateAsc():LiveData<List<Note>>
+
+    @Query("SELECT *FROM notes_table ORDER BY id DESC")
+    fun getNotesSortedByDateDesc():LiveData<List<Note>>
+
+
+
 
 }

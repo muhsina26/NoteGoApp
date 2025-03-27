@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Notego</string>
+
+        <string-array name="sort_options">
+            <item>Sort by Date Ascending</item>
+            <item>Sort by Date Descending</item>
+            <item>Sort by Title Ascending</item>
+            <item>Sort by Title Descending</item>
+        </string-array>
+
+
 </resources>
