@@ -65,27 +65,67 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/toolbar"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+    <LinearLayout
+        android:id="@+id/layout_priority"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/et_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btn_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High"
+            android:backgroundTint="#FF5C5C"
+             android:textColor="#FFFFFF"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:backgroundTint="#FFA500"
+        android:textColor="#FFFFFF"
+        android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low"
+            android:backgroundTint="#00C853"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
 
     <EditText
         android:id="@+id/et_note"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_goneMarginTop="26dp"
         android:layout_marginTop="32dp"
-        android:ems="10"
-         app:layout_constraintBottom_toBottomOf="parent"
-
-
-
-        android:inputType="textPersonName"
-        android:hint="Start Typing"
         android:background="@null"
+        android:ems="10"
         android:gravity="top"
+
+
+        android:hint="Start Typing"
+        android:inputType="textPersonName"
         android:lineSpacingMultiplier="1.8"
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/et_title"
+
+
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/et_title"
-        app:layout_constraintTop_toBottomOf="@+id/et_title" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_priority"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_goneMarginTop="26dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

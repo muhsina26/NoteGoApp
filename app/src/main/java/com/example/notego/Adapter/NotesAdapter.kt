@@ -18,6 +18,8 @@ class NotesAdapter(private  val context: Context,val listener:NotesClickListener
 
 
 
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
         return  NoteViewHolder(
             LayoutInflater.from(context).inflate(R.layout.list_item,parent,false)
@@ -68,6 +70,8 @@ class NotesAdapter(private  val context: Context,val listener:NotesClickListener
         holder.Note_tv.text=currentNote.note
         holder.date.text=currentNote.date
         holder.date.isSelected=true
+        holder.priority.text = "Priority: ${currentNote.priority ?: "N/A"}"
+
         holder.notes_layout.setCardBackgroundColor(holder.itemView.resources.getColor(randomColor()))
         holder.notes_layout.setOnClickListener {
             listener.onItemClicked(NotesList[holder.adapterPosition])
@@ -88,6 +92,8 @@ class NotesAdapter(private  val context: Context,val listener:NotesClickListener
         val title=itemView.findViewById<TextView>(R.id.tv_title)
         val Note_tv=itemView.findViewById<TextView>(R.id.tv_note)
         val date= itemView.findViewById<TextView>(R.id.tv_date)
+        val priority = itemView.findViewById<TextView>(R.id.tv_priority)
+
 
 
     }

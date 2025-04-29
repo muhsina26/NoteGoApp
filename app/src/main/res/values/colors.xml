@@ -10,6 +10,10 @@
     <color name="pastel_orange">#FFD8B1</color>
     <color name="pastel_teal">#99E6D9</color>
     <color name="pastel_lavender">#E6E6FA</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FFA500</color>
+    <color name="green">#00FF00</color>
+    <color name="transparent">#00000000</color>
 
 
 </resources>

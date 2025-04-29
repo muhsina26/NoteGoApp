@@ -14,9 +14,10 @@ class NotesRepository(private val noteDao: NoteDao) {
         noteDao.delete(note)
     }
 
-    suspend fun  update(note: Note){
-        noteDao.update(note.id,note.title,note.note)
+    suspend fun update(note: Note) {
+        noteDao.update(note.id, note.title, note.note, note.priority)
     }
+
 
     //Sorting methods
     fun getNotesSortedByTitleAsc():LiveData<List<Note>>{
@@ -38,3 +39,5 @@ class NotesRepository(private val noteDao: NoteDao) {
 
 
 }
+
+
